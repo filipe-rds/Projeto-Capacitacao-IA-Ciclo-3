@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.h5
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretório de ambientes virtuais
+env/
+venv/
+.venv/
+
+# Configurações locais do Jupyter e VSCode
+.jupyter/
+.vscode/
+
+# MLFlow
+mlruns/
+*.db
+
+# Arquivos de log e depuração
+*.log
+*.out
+*.err
+
+# Dados temporários e de cache
+*.csv
+*.tmp
+*.bak
+*.swp
+*.swo
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Arquivos de resultados de testes
+*.test
+*.coverage
+.coverage.*
+
+# Dependências de pacotes geradas
+Pipfile.lock
+poetry.lock
+
+# Arquivos e diretórios de IDEs
+.idea/
+.project
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
