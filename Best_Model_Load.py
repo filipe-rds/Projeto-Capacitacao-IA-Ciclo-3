@@ -1,7 +1,7 @@
 import pandas as pd
 import mlflow
 import mlflow.pyfunc
-from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # Configurar o tracking URI relativo para MLFlow (não será necessário se o modelo estiver fora do MLFlow)
@@ -16,9 +16,9 @@ data = pd.read_csv("water_potability.csv")
 data = data.dropna()
 
 # Dividir o dataset em treino e teste
-X = data.drop("Potability", axis=1)
+x = data.drop("Potability", axis=1)
 y = data["Potability"]
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=None)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=None, stratify=y)
 
 # Caminho para o modelo na pasta raiz
 model_path = "./best_model"
